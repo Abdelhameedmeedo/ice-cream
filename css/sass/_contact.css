@@ -1,0 +1,17 @@
+.contact {
+  width: 10%;
+  position: absolute;
+  top: 160px;
+}
+
+.contact .icons li {
+  list-style: none;
+  font-size: 25px;
+  cursor: pointer;
+  width: 25px;
+  color: plum;
+}
+
+.contact .icons li:hover {
+  color: #ffc107;
+}

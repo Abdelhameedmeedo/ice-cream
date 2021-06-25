@@ -1,0 +1,76 @@
+// variables
+$abs:absolute;
+$relative:relative;
+
+.navbar{
+    background-color: deeppink;
+    span{
+        font-size: 27px;
+        padding-left: 30px;
+        font-family: 'Pacifico', cursive;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        position: $relative;
+        top: 5px;
+        padding-right: 20px;
+        li{
+            margin-left: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: azure;
+        }
+        li:hover{                
+            background: slateblue;
+            padding-right: 3px;
+            padding-left: 3px;
+            border-radius: 6px;
+        }
+        .active{
+            background: slateblue;
+            padding-right: 3px;
+            padding-left: 3px;
+            border-radius: 6px;
+        }
+    }
+}
+.popup{
+    position: $abs;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(2,2,2,.7);
+    .container{
+        position: $abs;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        left: 25%;
+        background: darkcyan;
+        display: grid;
+        grid-template-columns: 20% 20%;
+        gap: 5px;
+        label{position: $relative;left: 170%;top: 35px;color: aliceblue;}
+        span{position: $relative;left: 150%;top: 35px;color: aliceblue;}
+        .close{
+            position: $abs;
+            top: 0;
+            left: 0;
+            background: red;
+            width: 45px;
+            height: 35px;
+            text-align: center;
+            font-size: 19px;
+            line-height: 25px;
+            color: antiquewhite;
+            font-weight: bold;
+            cursor: pointer;
+            border-bottom-right-radius: 30px;
+        }
+        .close:hover{opacity: .8;}
+    }
+}

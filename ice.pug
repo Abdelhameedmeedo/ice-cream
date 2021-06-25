@@ -1,0 +1,56 @@
+doctype
+html
+    head
+        link(rel="stylesheet",href="css/bootstrap.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap")
+        link(rel="stylesheet",href="css/all.min.css")
+        link(rel="stylesheet",href="css/home.css")
+    body
+        //start page  content
+        div(class='page')
+            div(class='container')
+                //start navbar
+                div(class="navbar")
+                    div(class="container")
+                        span ice
+                        ul
+                            li(class='active')  Home
+                            li(class='branch') Branches
+                //end navbar
+                div(class='content')
+                    //start contact section
+                    div(class="contact")
+                        div(class="container")
+                            ul(class="icons")
+                                -var iconsClasses = ['fab fa-facebook-square','fab fa-instagram-square','fab fa-linkedin','fab fa-github-square']
+                                each value in iconsClasses.length ? iconsClasses : ['no']
+                                    li
+                                        i(class = value)
+                    //end contact section
+
+                    //start info
+                    div(class='info')
+                        div(class='container')
+                            h3 get your favorite ice-cream!
+                            p 
+                                |  choose favorite kind of ice-cream,there are many kinds in our our shop 
+                                |  demand now => 
+                    //end info
+
+                    //start images / ice-shop
+                    div(class='ice-show')
+                        div(class='container')
+                            -var images = ['img/chocolate.jpg','img/strawberry.jpg','img/mango.jpg','img/peach.jpg','img/vanilla.jpg','img/watermelon.jpg']
+                            -var title = ['chocolate','strawberry','mango','peach','vanilla','watermelon']
+                            div(class='screen-img')
+                                img(src = 'img/chocolate.jpg',id = 1,title='chocolate')
+                                button(class='demand-btn') Demand
+                            div(class='row')
+                                -for(var i = 0 ; i < 6 ; i++)
+                                    div(class='column')
+                                        img(src = images[i],id = i,class = 'below-img',title = title[i])
+                    //end images / ice-shop
+                    //end page  content
+        script(src="js/all.min.js")
+        script(src='js/jquery-com.js')
+        script(src="js/ice-cream.js")

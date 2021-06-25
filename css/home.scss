@@ -1,0 +1,19 @@
+@import 'sass/navbar';
+@import 'sass/contact';
+@import 'sass/images';
+::-webkit-scrollbar{
+    width: 0;
+}
+.content{
+    height: 570px;
+    height: 570px;
+    background-image: linear-gradient(to right, purple,deeppink);
+    .info{
+        width: 395px;
+        position: relative;
+        left: 215px;
+        top: 230px;
+        h3{color: yellowgreen;}
+        p{color: mintcream;}
+    }    
+}
